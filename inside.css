@@ -1,0 +1,367 @@
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    background:#161616;
+
+}
+
+.scroll-container{
+
+    height:100vh;
+
+    overflow-y:scroll;
+
+    scroll-snap-type:y mandatory;
+
+}
+.page{
+
+    position:relative;
+
+    width:440px;
+
+    height:956px;
+
+    margin:auto;
+
+    overflow:hidden;
+
+    scroll-snap-align:start;
+
+}
+
+.inside-page{
+
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+.menu-page{
+
+    background:#32070B;
+
+}
+
+.menu-cover{
+
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+.dj{
+
+    position:absolute;
+
+    width:90px;
+
+    left:175px;
+
+    top:250px;
+ 
+    scale: 150%;
+
+    cursor:pointer;
+
+    animation:spin 6s linear infinite;
+
+}
+
+.box{
+
+    position:absolute;
+
+    width:90px;
+
+    left:60px;
+
+    scale: 120%;
+
+    bottom: 350px;
+
+    cursor:pointer;
+
+    animation:popCycle 6s infinite;
+
+}
+
+.ticket{
+
+    position:absolute;
+
+    width:90px;
+
+    left:300px;
+
+    top:610px;
+
+    scale: 120%;
+
+    cursor:pointer;
+
+    animation:popCycle 6s infinite;
+
+    animation-delay:2s;
+
+
+}
+
+.camera{
+
+    position:absolute;
+
+    width:90px;
+
+    right:260px;
+
+    top:800px;
+
+    scale: 150%;
+
+    cursor:pointer;
+
+    animation:popCycle 6s infinite;
+
+    animation-delay:4s;
+
+}
+
+
+
+@keyframes spin{
+
+    from{
+
+        transform:rotate(0deg);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+@keyframes popCycle{
+
+    0%{
+
+        transform:scale(1) rotate(0deg);
+
+    }
+
+    5%{
+
+        transform:scale(1.2) rotate(-4deg);
+
+    }
+
+    10%{
+
+        transform:scale(1.2) rotate(4deg);
+
+    }
+
+    15%{
+
+        transform:scale(1) rotate(0deg);
+
+    }
+
+    100%{
+
+        transform:scale(1) rotate(0deg);
+
+    }
+
+}
+
+.page-image{
+
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+.dj-click{
+
+    animation:djClick .45s ease forwards;
+
+}
+
+.ticket-click{
+
+    animation:ticketClick .45s ease forwards;
+
+}
+
+.camera-click{
+
+    animation:cameraClick .45s ease forwards;
+
+}
+
+.box-click{
+
+    animation:boxClick .45s ease forwards;
+
+}
+
+@keyframes djClick{
+
+    0%{
+
+        transform:scale(1) rotate(0deg);
+
+    }
+
+    40%{
+
+        transform:scale(1.12) rotate(20deg);
+
+    }
+
+    100%{
+
+        transform:scale(1.18) rotate(360deg);
+
+    }
+
+}
+
+@keyframes ticketClick{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.25);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+@keyframes cameraClick{
+
+    0%{
+
+        filter:brightness(1);
+
+    }
+
+    50%{
+
+        filter:brightness(3);
+
+    }
+
+    100%{
+
+        filter:brightness(1);
+
+    }
+
+}
+
+@keyframes boxClick{
+
+    0%{
+
+        transform:translateX(0);
+
+    }
+
+    20%{
+
+        transform:translateX(-8px);
+
+    }
+
+    40%{
+
+        transform:translateX(8px);
+
+    }
+
+    60%{
+
+        transform:translateX(-6px);
+
+    }
+
+    80%{
+
+        transform:translateX(6px);
+
+    }
+
+    100%{
+
+        transform:translateX(0);
+
+    }
+
+}
+
+.wrapper{
+
+    transition:
+        transform .45s ease,
+        opacity .45s ease;
+
+}
+
+.wrapper.zoom-out{
+
+    transform:scale(1.08);
+
+    opacity:0;
+
+}

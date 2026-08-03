@@ -1,0 +1,187 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,
+body{
+
+    width:100%;
+    height:100%;
+
+}
+
+body{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#161616;
+
+    overflow:hidden;
+
+}
+
+.container{
+
+    position:relative;
+
+    width:440px;
+    height:956px;
+
+    overflow:hidden;
+
+    border-radius:55px;
+
+    background:#32070B;
+
+}
+
+.inside{
+
+    position:absolute;
+    inset:0;
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    border-radius:55px;
+
+    z-index:1;
+
+    filter:blur(2px);
+
+    transition:filter 1.2s ease;
+
+}
+
+
+.cover-full{
+
+    position:absolute;
+    inset:0;
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    z-index:2;
+
+    animation:hideFullCover .4s ease forwards;
+    animation-delay:3s;
+
+}
+
+.cover-keyhole{
+
+    position:absolute;
+    inset:0;
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    z-index:3;
+
+    cursor:pointer;
+
+    transition:
+        transform 5s cubic-bezier(.2,.8,.2,1),
+        opacity .5s ease;
+
+}
+
+.title{
+
+    position:absolute;
+
+    top:70px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:300px;
+
+    z-index:5;
+
+    transition:.8s;
+
+}
+
+.barcode{
+
+    position:absolute;
+
+    bottom:70px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:180px;
+
+    z-index:5;
+
+    transition:.8s;
+
+}
+
+@keyframes hideFullCover{
+
+    from{
+
+        opacity:1;
+
+    }
+
+    to{
+
+        opacity:0;
+
+    }
+
+}
+
+
+
+.container.open .title{
+
+    opacity:0;
+
+}
+
+.container.open .barcode{
+
+    opacity:0;
+
+}
+
+.container.open .cover-full{
+
+    opacity:0;
+
+    transition:.8s;
+
+}
+
+.container.open .cover-keyhole{
+
+    transform:scale(8);
+
+
+}
+
+.container.open .inside{
+
+    filter:blur(0);
+
+}

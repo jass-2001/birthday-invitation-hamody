@@ -1,0 +1,95 @@
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+html,
+body{
+
+    width:100%;
+    height:100%;
+
+}
+
+body{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#161616;
+
+    overflow:hidden;
+
+}
+
+.container{
+
+    position:relative;
+
+    width:440px;
+
+    height:956px;
+
+    overflow:hidden;
+
+    border-radius:55px;
+
+    background:#32070B;
+
+}
+
+.ticket-page{
+
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+.back{
+
+    position:fixed;
+
+    top:950px;
+
+    left:50%;
+
+    transform:translateX(-190px);
+
+    width:42px;
+
+    z-index:999;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.back:hover{
+
+    transform:
+    translateX(-190px)
+    scale(1.08);
+
+}
+
+.back:active{
+
+    transform:
+    translateX(-190px)
+    scale(.92);
+
+}
