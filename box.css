@@ -82,9 +82,9 @@ body{
 
 .back{
 
-    position:fixed;
+    position:abslote;
 
-    top:950px;
+    top:900px;
 
     left:50%;
 
