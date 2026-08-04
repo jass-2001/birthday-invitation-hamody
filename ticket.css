@@ -58,38 +58,29 @@ body{
 
 }
 
-.back{
+   position: sticky;
 
-    position:fixed;
+    top: 910px;
 
-    top:950px;
+    left: 25px;
 
-    left:50%;
+    width: 42px;
 
-    transform:translateX(-190px);
+    z-index: 9999;
 
-    width:42px;
+    cursor: pointer;
 
-    z-index:999;
-
-    cursor:pointer;
-
-    transition:.25s;
-
+    transition: transform .25s;
 }
 
 .back:hover{
 
-    transform:
-    translateX(-190px)
-    scale(1.08);
+    transform:scale(1.08);
 
 }
 
 .back:active{
 
-    transform:
-    translateX(-190px)
-    scale(.92);
+    transform:scale(.92);
 
 }
