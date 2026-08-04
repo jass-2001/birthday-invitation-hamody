@@ -78,15 +78,17 @@ body{
 
     object-fit:cover;
 
+    z-index:1;
+
 }
 
 .back{
 
-    position: absolute;
+    position: sticky;
 
-    top: 40px;
+    top: 910px;
 
-    left: 20px;
+    left: 25px;
 
     width: 42px;
 
@@ -94,18 +96,18 @@ body{
 
     cursor: pointer;
 
-    transition: .25s;
+    transition: transform .25s;
 
 }
 
 .back:hover{
 
-    transform: scale(1.08);
+    transform:scale(1.08);
 
 }
 
 .back:active{
 
-    transform: scale(.92);
+    transform:scale(.92);
 
 }
