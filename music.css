@@ -94,17 +94,17 @@ body{
 
 .back{
 
-    position: fixed;
+    position:absolute;
 
-    top: 910px;
+    top:910px;
 
-    left: 25px;
+    left:25px;
 
-    width: 42px;
+    width:42px;
 
-    z-index: 9999;
+    z-index:9999;
 
-    cursor: pointer;
+    cursor:pointer;
 
     transition: transform .25s;
 
