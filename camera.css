@@ -83,21 +83,31 @@ body{
 
 .back{
 
-    position:fixed;
+    position: sticky;
 
-    top:950px;
+    top: 910px;
 
-    left:50%;
+    left: 25px;
 
-    transform:translateX(-190px);
+    width: 42px;
 
-    width:42px;
+    z-index: 9999;
 
-    z-index:999;
+    cursor: pointer;
 
-    cursor:pointer;
+    transition: transform .25s;
 
-    transition:.25s;
+}
+
+.back:hover{
+
+    transform:scale(1.08);
+
+}
+
+.back:active{
+
+    transform:scale(.92);
 
 }
 
