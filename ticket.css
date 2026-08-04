@@ -58,19 +58,22 @@ body{
 
 }
 
-   position: sticky;
+.back{
 
-    top: 910px;
+    position:absolute;
 
-    left: 25px;
+    top:910px;
 
-    width: 42px;
+    left:25px;
 
-    z-index: 9999;
+    width:42px;
 
-    cursor: pointer;
+    z-index:9999;
+
+    cursor:pointer;
 
     transition: transform .25s;
+    
 }
 
 .back:hover{
