@@ -111,25 +111,41 @@ body{
 
 }
 
-/* الفيديوهات */
+/* ================= Videos ================= */
 
 .videos{
 
     position:absolute;
 
-    top:200px;
-
     left:50%;
-
-    transform:translateX(-50%);
 
     display:flex;
 
     flex-direction:column;
 
-    gap: 70px;
+    gap:70px;
 
     z-index:2;
+
+}
+
+/* الصفحة الأولى */
+
+.page-with-title .videos{
+
+    top:200px;
+
+    transform:translateX(-50%);
+
+}
+
+/* الصفحات الثانية والثالثة والرابعة */
+
+.page-center .videos{
+
+    top:50%;
+
+    transform:translate(-50%,-50%);
 
 }
 
@@ -137,11 +153,11 @@ body{
 
     position:relative;
 
-    scale: 110%;
-
     width:180px;
 
     height:320px;
+
+    scale:1.1;
 
     border-radius:22px;
 
@@ -175,16 +191,14 @@ body{
 
     left:50%;
 
-    transform:translate(-50%,-50%) scale(1);
+    transform:translate(-50%,-50%);
 
     width:70px;
 
     pointer-events:none;
 
     transition:
-
         opacity .35s ease,
-
         transform .35s ease;
 
 }
