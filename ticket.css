@@ -28,13 +28,39 @@ body{
 
 }
 
+/* الفريم الخارجي */
+
+.phone{
+
+    width:100vw;
+
+    height:100dvh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:
+        env(safe-area-inset-top)
+        env(safe-area-inset-right)
+        env(safe-area-inset-bottom)
+        env(safe-area-inset-left);
+
+}
+
+/* شاشة الآيفون */
+
 .container{
 
     position:relative;
 
-    width:440px;
+    width:min(440px,100vw);
 
-    height:956px;
+    aspect-ratio:440/956;
+
+    max-height:100%;
 
     overflow:hidden;
 
@@ -43,6 +69,8 @@ body{
     background:#32070B;
 
 }
+
+/* الصورة */
 
 .ticket-page{
 
@@ -58,22 +86,24 @@ body{
 
 }
 
+/* زر الرجوع */
+
 .back{
 
     position:absolute;
 
-    top:910px;
+    top:3.7%;
 
-    left:25px;
+    left:5.7%;
 
-    width:42px;
+    width:9.5%;
 
-    z-index:9999;
+    z-index:999;
 
     cursor:pointer;
 
-    transition: transform .25s;
-    
+    transition:transform .25s;
+
 }
 
 .back:hover{
