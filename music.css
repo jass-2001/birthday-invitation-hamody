@@ -90,38 +90,34 @@ body{
 
 }
 
+}
+
 .back{
 
-    position:fixed;
+    position: fixed;
 
-    top:950px;
+    top: 910px;
 
-    left:50%;
+    left: 25px;
 
-    transform:translateX(-190px);
+    width: 42px;
 
-    width:42px;
+    z-index: 9999;
 
-    z-index:999;
+    cursor: pointer;
 
-    cursor:pointer;
-
-    transition:.25s;
+    transition: transform .25s;
 
 }
 
 .back:hover{
 
-    transform:
-    translateX(-190px)
-    scale(1.08);
+    transform:scale(1.08);
 
 }
 
 .back:active{
 
-    transform:
-    translateX(-190px)
-    scale(.92);
+    transform:scale(.92);
 
 }
